@@ -1,0 +1,1057 @@
+/* Reset some default styles and set the font family */
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+/*----------------------------------------------------navigations bar--------------------------------------------------------------------------------------------------------------*/
+/* Styles for the home page navigation bar */
+.topnav {
+  overflow: hidden;
+  background: #000000;
+  
+}
+
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  font-weight: bold;
+  text-align: center;
+  padding: 12px 18px;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.topnav a:hover {
+  background-color: #ffffff;
+  color: #000000;
+  border-radius: 8px;
+}
+
+.topnav a.active {
+  background-color: rgb(255, 254, 254) 255, 255, 0.443;
+  color: rgba(0, 47, 255, 0.727);
+  border-radius: 8px;
+  
+}
+/* for the exit page navigation*/
+.exit{
+  overflow: hidden;
+  background-color:#000000 ;
+  filter: blur(3px);
+}
+.exit a {
+  float: left;
+  color: #f2f2f2;
+  font-weight: bold;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 20px;
+
+}
+.exit a:hover {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+/*for the blur navigaion bar use in multipal pages */
+.blur-nav{
+  overflow: hidden;
+  background-color:#000000 ;
+  filter: blur(0.1px);
+}
+.blur-nav a {
+  float: left;
+  color: #f2f2f2;
+  font-weight: bold;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 20px;
+
+}
+
+.blur-nav a:hover {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.blur-nav a.active {
+  background-color: rgb(255, 254, 254) 255, 255, 0.443;
+  color: rgb(255, 0, 0);
+  border-radius: 8px;
+}
+
+/*bottom navigation*/
+.bottom-nav {
+  background-color: #000000; /* Background color */
+  position: fixed; /* Fix the navigation bar at the bottom of the viewport */
+  width: 100%; /* 100% width of the viewport */
+  text-align: left; /* Center-align the links */
+  bottom: 0; /* Stick to the bottom of the viewport */
+  height: 45px;
+}
+
+/* Style the links in the bottom navigation bar */
+.bottom-nav a {
+  display: inline-block; /* Display links in a row */
+  color: rgb(255, 255, 255); /* Text color */
+  font-weight: bold;
+  text-decoration: none; /* Remove underline from links */
+  transition: .10s ease all; /* Smooth transitions for hover effect */
+  padding: 15px 15px; /* Padding for each link */
+  text-decoration: none; /* Remove underline from links */
+  font-size: 20px;
+
+}
+
+/* Style links on hover */
+.bottom-nav a:hover {
+  background-color: #ffffff; /* Background color on hover */
+  color: #000000;
+}
+
+
+.bottom-nav a.active {
+  background-color: rgb(255, 255, 255) 255, 255, 0.443;
+  color: rgb(255, 0, 0);
+  border-radius: 8px;
+}
+
+
+/*---------------------------------------------------------------------------------------------------home_page--------------------------------------------------------------------------------*/
+
+/* for the instruction box and instruction text */
+.instructions {
+  position: absolute;
+  width: 96%;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  background: hsla(0, 100%, 100%, 0.242);
+  font-family: "Roboto", sans-serif; 
+  color: #000000;
+}
+
+/* for headings and loader animation */
+.instructions h3 {
+  font-size: 2vw;
+  letter-spacing: 0.1em;
+}
+
+.loader span {
+  color: #faebd7;
+  text-shadow: 0 0 0 #83838310;
+  animation: loading 1s ease-in-out infinite alternate; 
+}
+
+@keyframes loading {
+  to {
+    text-shadow: 20px 0 70px #ff0202;
+    color: #030303;
+  }
+}
+
+/* Loader animation delays for spans */
+.loader span:nth-child(n + 2) {
+  animation-delay: 0.1s * (n - 1);
+}
+
+/* for the intro_page Container styles and additional text styles  */
+.container {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+/* intro_page  font*/
+.instructions p {
+  color: #ffefef;
+  font-size: 20px;
+  font-style: italic;
+  text-align: left;
+  font-family: "Lucida Console", "Courier New", monospace;
+
+}
+
+
+
+
+/*------------------------------------------------------------------------------exit_page-----------------------------------------------------------------------------------------------------*/
+/*animation for the outside box*/
+@keyframes fade {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+.confirm {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  min-width: 280px;
+  max-width: 500px;
+  height: auto;
+  background: #12121271;
+  border-radius: 10px;
+  padding: 0;
+  margin: 0;
+  border: 2px solid rgb(255, 255, 255);
+  animation: fade 1s ease 1 forwards;
+}
+.confirm h1 {
+  text-align: center;
+  font-size: 1.2rem;
+  margin: 1.5rem 1rem 0.5rem;
+  color: #ffffff;
+}
+/*alert text editing */
+.confirm p {
+  text-align: center;
+  font-size: 1rem;
+  margin: 0 2rem 4.5rem;
+  color: #ffffff;
+}
+.confirm a {
+  background: transparent;
+  border: none;
+  color: #ffffff;
+  height: 2.5rem;
+  font-size: 1.2rem;
+  width: 50%;
+  position: absolute;
+  bottom: 0;
+  cursor: pointer;
+ text-decoration-line: none;
+  text-align: center;
+  font-weight: bold;
+  
+}
+.confirm a:nth-of-type(1) {
+  border-top: 1px solid #B4B4B4;
+  border-right: 1px solid #B4B4B4;
+  left: 0;
+  border-radius: 0 0 0 10px;
+}
+.confirm a:nth-of-type(2) {
+  border-top: 1px solid #B4B4B4;
+  right: 0;
+  border-radius: 0 0 10px 0;
+}
+
+.confirm a:hover {
+  font-weight: bold;
+  background: #ffffff;
+  color: #000000;
+}
+.confirm a:active {
+  background: #000000;
+  color: #f2f2f2;
+}
+
+
+/*-----------------------------------------------------------------------------------setting_ page----------------------------------------------------------------------------------------------*/
+/*outside box control*/
+.setting {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 10%;
+    min-width: 28%;
+    max-width: 80%;
+    height: 40%;
+    background: #12121271;
+    border-radius: 10px;
+    padding: 0;
+    margin: 0;
+    border: 2px solid rgb(255, 255, 255);
+    animation: fade 1s ease 1 forwards;
+  }
+
+  .setting h1 {
+    text-align: center;
+    font-size: 2rem;
+    margin: 1.5rem 0.5rem;
+    color: #ffffff;
+  }
+
+  .setting a{
+    background: black;
+  border: 1px solid #000000;
+  border-radius: 10%;
+    color: hsl(0, 0%, 100%);
+    height: 2rem;
+    font-size: medium;
+    width: 20%;
+    position: absolute;
+    bottom: auto;
+    cursor: pointer;
+   text-decoration-line: none;
+    text-align: center;
+    font-weight: bold;
+    right: 30%;
+    top: 90%;
+    animation: fade 1s ease 1 forwards;
+  }
+.setting p{
+ font-weight: bold;
+ font-family: 'Times New Roman', Times, serif;
+ font-size: large;
+text-align: center;
+
+color: #fff;
+
+}
+  .setting a:hover{
+  background-color: #f2f2f2;
+    color: #000000;
+    
+  }
+
+  /*for the audio and video */
+  .setting-option {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 110px;
+    color: rgb(255, 255, 255);
+    font-weight: 900;
+    font-size: medium;
+}
+/*for the switch the button for on off*/
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 20px;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 34px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    left: 2px;
+    bottom: 2px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: #03fc2c;
+}
+
+input:checked + .slider:before {
+    -webkit-transform: translateX(20px);
+    -ms-transform: translateX(20px);
+    transform: translateX(20px);
+}
+
+
+
+/*---------------------------------------------------------------------------------------intro_page-------------------------------------------------------------------------------------------*/
+    /* animation for the start and skip button */
+@keyframes neonPulse {
+  0% {
+      background-color: #1e1f1f;
+      box-shadow: 0 0 10px rgba(0, 204, 255, 0.5);
+  }
+  50% {
+      background-color: #070707;
+      box-shadow: 0 0 20px rgba(255, 0, 38, 0.7);
+  }
+  100% {
+      background-color: #00ccff;
+      box-shadow: 0 0 10px rgba(0, 204, 255, 0.5);
+  }
+}
+
+#startButton, #skipButton {
+  background-color: #1e1f1f;
+  color: #fff;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 5px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 5px;
+  cursor: pointer;
+  animation: neonPulse 2s infinite; 
+}
+
+#startButton:hover, #skipButton:hover {
+  background-color: #f8fdfe;
+  color: #000000;
+  animation: none;
+}
+
+#startButton {
+  position: absolute;
+  top: 85%;
+  left: 47%;
+  transform: translate(-50%, -50%);
+}
+
+#skipButton {
+  position: absolute;
+  top: 93%;
+  left: 95%;
+  transform: translate(-50%, -50%);
+}
+
+#myVideo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  
+  
+}
+
+
+
+/*------------------------------------------------------------------login_page-----------------------------------------------------------------------------------------------------------*/
+/*contorl outside box */
+.login {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 8%;
+  min-width: 28%;
+  max-width: 50%;
+  height: auto;
+  background: #12121257;
+  border-radius: 10px;
+  padding: 0;
+  margin: 0;
+  border: 2px solid rgb(255, 255, 255);
+  animation: fade 1s ease 1 forwards;
+}
+
+.login a{
+
+color: #00ccff;
+font-weight: bold;
+font-size: medium;
+font-style: italic;
+
+}
+.login a:hover{
+background-color: #f2f2f2;
+  color: #000000;
+  
+}
+
+form {
+
+  padding: 20px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+ 
+  .login h1 {
+    text-align: center;
+    font-size: 2rem;
+    margin: 1.5rem 0.5rem;
+    color: #ffffff;
+}
+
+.input-container {
+  margin-bottom: 20px;
+  color: white;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="password"] {
+  width: 90%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  background-color: #000000;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 3px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.2s;
+}
+
+.login button:hover {
+  background-color: #ffffff;
+  color: #000000;
+}
+/*edit register box and when box open edit background*/
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color:#00000059;
+  z-index: 2;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 1.5);
+  text-align: center;
+
+}
+.registration-popup {
+  
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 22%;
+    transform: translate(-50%, -50%);
+    background: #121212;
+    padding: 20px;
+    border: 1px solid #ffffff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 3;
+    animation: fade 1s ease 1 forwards;
+  
+}
+/*forgot password box*/
+.form-popup {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #121212;
+  padding: 20px;
+  border: 1px solid #ffffff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  z-index: 3;
+  animation: fade 1s ease 1 forwards;
+}
+.overlay h1{
+text-align: center;
+text-decoration: wavy;
+font-weight: bold;
+color: #f2f2f2;
+
+}
+.overlay button{
+  background-color: #000000;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 3px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.2s;
+
+
+}
+
+.overlay button:hover {
+  background-color: #ffffff;
+  color: #000000;}
+
+
+  
+.back a{
+  background: rgb(0, 0, 0);
+ border: 1px solid #000000;
+ display: inline-block;
+ border-radius: 6%;
+  color: hsl(0, 0%, 100%);
+  height: 2rem;
+  font-size: medium;
+  width: 20%;
+  position: absolute;
+  bottom: auto;
+  cursor: pointer;
+ text-decoration-line: none;
+  text-align: center;
+  font-weight: bold;
+  right: 10%;
+  top: 65%;
+  animation: fade 1s ease 1 forwards;
+  padding: 2px 7px;
+  font-family: Arial, Helvetica, sans-serif;
+ 
+}
+
+
+.back a:hover{
+background-color: #f2f2f2;
+  color: #000000;
+  
+}
+
+.l-button{
+  position: relative;
+    display: inline-block;
+    cursor: pointer;
+    color: #000;
+    right:20%;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 8px 2px;
+    transition-duration: 0.4s;
+ font-family:'Courier New', Courier, monospace
+
+}
+/*------------------------------------------------------------------------------------play_page------------------------------------------------------------------------------------------------*/
+
+/*play_page heding edit*/
+#mode-heading {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+#gameMode {
+  font-size: 15px;
+}
+/*play_page-to managing outside box*/
+.play{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 30%;
+  height: auto;
+  background: #12121271;
+  border-radius: 10px;
+  padding: 0;
+  margin: 0;
+  border: 1px solid rgb(255, 255, 255);
+  animation: fade 1s ease 1 forwards;
+}
+.play h1 {
+  text-align: center;
+  font-size: 1.2rem;
+  
+  color: #ffffff;
+}
+.play a {
+  background: transparent;
+  
+  color: #ffffff;
+  height: 2.3rem;
+  font-size: 1.2rem;
+  width: 50%;
+  position: absolute;
+  bottom: 0;
+  cursor: pointer;
+ text-decoration-line: none;
+  text-align: center;
+  font-weight: bold;
+  
+}
+/*play_page -edititng buttons */
+.play a:nth-of-type(1) {
+  border-top: 1px solid #b4b4b4;
+  border-right: 3px solid #B4B4B4;
+  left: 0;
+  border-radius: 0 0 0 10px;
+}
+.play a:nth-of-type(2) {
+  border-top: 1px solid #B4B4B4;
+  border-left: 1px solid #B4B4B4;
+  right: 0;
+  border-radius: 0 0 10px 0;
+}
+
+.play a:hover {
+  font-weight: bold;
+  background: #ffffff;
+  color: #000000;
+}
+.play a:active {
+  background: #000000;
+  color: #000000;
+}
+/* play_page- dropdown */
+.drop select {
+  width: 50%;
+  padding: 10px;
+  border: 3px solid #fffefe;
+  border-radius: 5px;
+  font-size: 16px;
+  background-color: #000000;
+  color: white;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+/* play_page - selected option from the dropdown */
+.drop select option:checked {
+  background-color: #3498db;
+  color: rgb(253, 253, 253);
+}
+
+
+.drop {
+  text-align: center;
+  margin: 10px 0px;
+}
+
+/* play_page - animation effect in the instruction  */
+#message {
+  font-size: 18px;
+  margin-top: 10px;
+  color: #080808;
+  font-weight: bold;
+  animation: neon 1s alternate infinite;
+}
+
+@keyframes neon {
+  0% {
+    text-shadow: 0 0 5px #fdfcfc, 0 0 10px #fffbfb, 0 0 30px #fff9f9;
+  }
+  100% {
+    text-shadow: 0 0 5px #050505, 0 0 10px #fffcfc, 0 0 30px #0a0a0a;
+  }
+}
+
+
+
+/*-----------------------------------------------------------------------------------------img-class------------------------------------------------------------------------------------------*/
+
+
+/* Styles for the background image */
+.background-img {
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 545px;
+}
+/*exit page img*/
+.exit-img {
+  
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 535px;
+    filter: blur(5px);
+  }
+  /* confirm page img */
+  .con-img{
+    background-size: cover ;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    filter: blur(5px);
+  }
+/*---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/* for the exit button link*/
+.e-button {
+  position: absolute;
+  right: 1px;
+  display: inline-block;
+  padding: 14px 20px;
+  background-color: #000000;
+  color: #fff;
+  border: none;  
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.e-button:hover {
+  background-color: #f9f7f7;
+}
+
+/*-----------------------------------------------------------------------------scoreboard_page-------------------------------------------------------------------------------------------------*/
+
+/*for the manage the outside ranking box*/
+
+.leaderboard {
+ position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+width: 25%;
+min-width: 25%;
+max-width: 80%;
+height: 80%;
+background: transparent;
+border-radius: 10px;
+font-family: sans-serif;
+animation: fade 1s ease 1 forwards;
+
+}
+header {
+  background-color: #eb1c1c;
+  color: rgb(255, 255, 255);
+  text-transform: uppercase;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  height: 15rem;
+  position: relative;
+}
+.leaderboard h1 {
+  font-size: 3rem;
+  line-height: 3rem;
+  position: absolute;
+  margin-left: 3rem;
+  top: 4rem;
+ 
+}
+
+/*navigation score classic and advance mode */
+a {
+  text-decoration: none;
+  color: inherit;
+  
+  display: inline-block;
+  
+
+}
+ 
+
+
+/*edit leader table */
+table {
+  background-color: #000000;
+  color: #999;
+  width: 100%;
+  border-collapse: collapse;
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  overflow: hidden;
+}
+/*head of teable modes and times ect*/
+thead {
+  font-size: 0.75rem;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+tbody .nick {
+  color: white;
+  font-weight: bold;
+}
+
+.nick {
+  text-align: left;
+}
+
+/*dummy img*/
+img {
+  height: 15rem;
+  position: absolute;
+  bottom: 0;
+  right: .00000000001rem;
+}
+nav a + a {
+  margin-left: 1rem;
+} 
+nav {
+  position: absolute;
+  bottom: 0;
+  font-size: 0.9rem;
+  background: linear-gradient(to bottom, transparent, transparent .2%, rgba(0, 0, 0, 0.5));
+}
+
+nav a {
+  padding-top: 12rem;
+  padding-bottom: 1rem;
+  display: inline-block;
+  font-weight: bolder;
+  font-size: 0.9rem;
+}
+
+
+.leaderboard a.active {
+  border-bottom: 4px solid rgb(0, 140, 255);
+}
+
+nav a:first-child {
+  margin-left: 1rem;
+}
+
+.rk, .tm {
+  text-align: right;
+
+}
+
+.tm, .rk {
+  width: 8ch;
+}
+
+
+
+th {
+  padding: 0.35rem 1rem 1rem;
+  text-align: left;
+}
+
+td {
+  padding: 1rem 1rem;
+}
+
+tbody tr:nth-child(2n) {
+  background-color: #474747a2;
+}
+/*----------------------------------------------------------------------------------------contact_us-------------------------------------------------------------------------------------------*/
+
+.contact {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 10%;
+  min-width: 28%;
+  max-width: 80%;
+  height: 40%;
+  background:rgb(0, 0, 0);
+  border-radius: 10px;
+  padding: 0;
+  margin: 0;
+  border: 2px solid rgb(255, 255, 255);
+  animation: fade 1s ease 1 forwards;
+}
+
+.contact h1 {
+  text-align: center;
+  font-size: 2rem;
+  margin: 1.5rem 0.5rem;
+  color: #ffffff;
+}
+
+.contact a{
+  background: rgb(0, 0, 0);
+border: 1px solid #ffffff;
+border-radius: 10%;
+  color: hsl(0, 0%, 100%);
+  height: 2rem;
+  font-size: medium;
+  width: 20%;
+  position: absolute;
+  bottom: auto;
+  cursor: pointer;
+ text-decoration-line: none;
+  text-align: center;
+  font-weight: bold;
+  right: 30%;
+  top: 90%;
+  animation: fade 1s ease 1 forwards;
+}
+.contact p{
+font-weight: bold;
+font-family: 'Times New Roman', Times, serif;
+font-size: large;
+text-align: center;
+
+color: #fff;
+
+}
+.contact a:hover{
+background-color: #f2f2f2;
+  color: #000000;
+  
+}
+
+/*------------------------------------------------------------------------------------------Info_page---------------------------------------------------------------------------------------*/
+
+.info {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60%;
+  min-width: 28%;
+  max-width: 100%;
+  height: 60%;
+  background:rgb(0, 0, 0);
+  border-radius: 10px;
+  padding: 0;
+  margin: 0;
+  border: 2px solid rgb(255, 255, 255);
+  animation: fade 1s ease 1 forwards;
+}
+
+.info h1 {
+  text-align: center;
+  font-size: 2rem;
+  margin: 1.5rem 0.5rem;
+  color: #ffffff;
+}
+.info h3{
+
+  text-align: left;
+   font-size: large;
+   line-height: 1.6em;
+   letter-spacing: .07em;
+  color: #fff; 
+  font-family :'Times New Roman', Times, serif;
+  }
+
+
+
+
+.info a{
+  background: rgb(0, 0, 0);
+border: 1px solid #ffffff;
+border-radius: 10%;
+  color: hsl(0, 0%, 100%);
+  height: 2rem;
+  font-size: medium;
+  width: 20%;
+  position: absolute;
+  bottom: auto;
+  cursor: pointer;
+ text-decoration-line: none;
+  text-align: center;
+  font-weight: bolder;
+  right: 30%;
+  top: 90%;
+  animation: fade 1s ease 1 forwards;
+}
+.info p{
+font-weight: bold;
+font-family: 'Times New Roman', Times, serif;
+font-size: medium;
+text-align: left;
+text-transform: lowercase;
+color: #fff;
+
+}
+.info a:hover{
+background-color: #f2f2f2;
+  color: #000000;
+  
+}
