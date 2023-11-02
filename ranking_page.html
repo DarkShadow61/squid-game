@@ -1,0 +1,170 @@
+<html>
+<head>
+    <title>Leader Board</title>
+    <link rel="stylesheet" href="../css/home.css">
+    <style>
+       
+      
+    </style>
+</head>
+<body>
+    <div class="blur-nav">
+        
+        <a href="play_page.html">PLAY</a>
+        <a href="login_page.html">LOGIN</a>
+        <a class="active" href="ranking_page.html">RANKING</a>
+        <a href="setting_page.html">SETTING</a>
+        <a href="exit_page.html" class="e-button" >LOGOUT</a>
+        </div>
+        <img src="../image/bg.jpg" class="exit-img">
+        
+<div class="leaderboard">
+  <header>
+    <h1>Leader Board</h1>
+    <img src="../image/RANK.webp" alt="">
+    <nav>
+      <a href="#yourscore" class="active">your score</a>
+      <a href="#classic">classic</a>
+      <a href="#advanced">advance</a>
+    </nav>
+  </header>
+  <table id="yourscore">
+    <thead>
+      <tr>
+     
+        <th class="user">attemps</th>
+        <th class="mode">mode</th>
+        <th class="kd">Time</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        
+        <td class="nick">attemp_1</td>
+        <td class="mode">classic</td>
+        <td class="kd">01:20</td>
+      </tr>
+      <tr>
+        
+        <td class="nick">attemp_2</td>
+        <td class="mode">advance</td>
+        <td class="kd">00:40</td>
+      </tr>
+      <tr>
+        
+        <td class="nick">attemp_3</td>
+        <td class="mode">advance</td>
+        <td class="kd">00:37</td>
+      </tr>
+      <tr>
+       <td></td>
+        <td><a href="home.html" class="back">BACK</a></td>
+        <td></td>
+      </tr>
+      
+    </tbody>
+  </table>
+  <table id="classic">
+    <thead>
+      <tr>
+        
+        <th class="nick">Name</th>
+        <th class="rk">rank</th>
+        <th class="tm">Time</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+       
+        <td class="nick">Player 1</td>
+        <td class="rk">1</td>
+        <td class="tm">1:09</td>
+      </tr>
+      <tr>
+      
+        <td class ="nick">Player 2</td>
+        <td class="rk">2</td>
+        <td class="tm">1:30</td>
+      </tr>
+      <tr>
+        <td class="nick">Player 3</td>
+        <td class="rk">3</td>
+        <td class="tm">1:45</td>
+      </tr>
+      <tr>
+        <td></td>
+         <td><a href="home.html" class="back">BACK</a></td>
+         <td></td>
+       </tr>
+    </tbody>
+  </table>
+  <table id="advanced">
+    <thead>
+      <tr>
+        
+        <th class="nick">Name</th>
+        <th class="rk">rank</th>
+        <th class="tm">time</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+       
+        <td class="nick">Player A</td>
+        <td class="rk">1</td>
+        <td class="tm">00:33 </td>
+      </tr>
+      <tr>
+      
+        <td class="nick">Player B</td>
+        <td class="rk">2</td>
+        <td class="tm">00:45</td>
+      </tr>
+      <tr>
+      
+        <td class="nick">Player C</td>
+        <td class="rk">3</td>
+        <td class="tm">00:57</td>
+      </tr>
+      <tr>
+        <td></td>
+         <td><a href="home.html" class="back">BACK</a></td>
+         <td></td>
+       </tr>
+    </tbody>
+  </table>
+</div>
+<div class="bottom-nav">
+    <a href="#home">Home</a>
+    <a href="#news">News</a>
+    <a href="#contact">Contact</a>
+</div>
+<script>
+  const tables = document.querySelectorAll("table");
+  const navLinks = document.querySelectorAll("nav a");
+
+  // Initially hide Classic and Advanced tables
+  tables[1].style.display = "none";
+  tables[2].style.display = "none";
+
+  navLinks.forEach((link, index) => {
+      link.addEventListener("click", () => {
+          // Hide all tables
+          tables.forEach(table => table.style.display = "none");
+          // Show the selected table based on the link index
+          tables[index].style.display = "table";
+          // Remove the "active" class from all links
+          navLinks.forEach(link => link.classList.remove("active"));
+          // Add the "active" class to the clicked link
+          link.classList.add("active");
+      });
+  });
+</script>
+<div class="bottom-nav">
+  <a href="contactus.html">Contact us</a>
+ 
+  <a href="info.html">Info</a>
+</div>
+<script src= "../javascript/home.js"></script>
+</body>
+</html>

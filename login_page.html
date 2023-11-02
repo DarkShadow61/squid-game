@@ -1,0 +1,92 @@
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Squid Game</title>
+    <link rel="stylesheet" href="../CSS/home.css">
+    
+</head>
+<body>
+
+<div class="blur-nav">
+    <a href="play_page.html">PLAY</a>
+    <a class="active" href="login_page.html">LOGIN</a>
+    <a href="ranking_page.html">RANKING</a>
+    <a href="setting_page.html">SETTING</a>
+    <a href="exit_page.html" class="e-button" >LOGOUT</a>
+</div>
+
+<img src="../image/bg.jpg" class="exit-img">
+
+<div class="login">
+    <form id="login-form">
+        <h1>Login</h1>
+        <div class="input-container">
+            <label for="email">Username:</label>
+            <input type="text" id="email" name="email" required>
+        </div>
+        <div class="input-container">
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+        </div>
+        <div class="l-button">
+        <button type="submit">Login</button></div>
+        <div class="back">
+        <a href="home.html" >Back</a>
+    </div><br><br>
+        
+        <a href="#" id="show-registration-popup">Don't have an Account? Register here</a>
+        <br><br>
+        <a href="#" id="show-forgot-password-popup">Forgot password</a>
+    </form>
+</div>
+
+<!-- Registration Popup -->
+<div class="overlay" id="registration-overlay">
+    <div class="registration-popup" id="registration-popup">
+        <h1>Register</h1>
+        <div class="input-container">
+            <label for="Register-name">Name:</label>
+            <input type="text" id="register-name" name="register-name" required>
+
+            <label for="register-email">Email:</label>
+            <input type="text" id="register-email" name="register-email" required>
+            <br>
+           
+            <label for ="register-password" >Password:</label>
+            <input type="password" id="register-password" name="register-password" required>
+        
+        </div>
+        <button type="button" id="register-button">Register</button>
+        <button type="button" id="back-to-login">Back</button>
+        <br><br>
+        
+    </div>
+
+</div>
+<!-- Forgot Password Popup -->
+<div class="overlay" id="forgot-password-overlay">
+    <div class="form-popup" id="forgot-password-popup">
+        <h1>Forgot Password</h1>
+        <div class="input-container">
+            <label for="forgot-email">Email:</label>
+            <input type="text" id="forgot-email" name="forgot-email" required>
+            <label for="forgot-password"> Password</label>
+            <input type="password" id="old-password" name="old-password" required>
+            <label for="new-password">New Password</label>
+            <input type="password" id="new-password" name="new-password" required>
+        <br>
+        </div>
+        <button type="button" id="forgot-password-button">Submit</button>
+        <button type="button" id="back-to-login-forgot">Back</button>
+    </div>
+</div>
+
+<div class="bottom-nav">
+    <a href="contactus.html" >Contact us</a>
+   
+    <a href="info.html">Info</a>
+</div>
+
+<script src="../javascript/home.js"></script>
+</body>
+</html>
